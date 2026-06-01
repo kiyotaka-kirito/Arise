@@ -15,6 +15,7 @@
 		66EC96882FCD503600BA27AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96872FCD503600BA27AD /* RealmSwift */; };
 		66EC96A52FCD521200BA27AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A42FCD521200BA27AD /* User.swift */; };
 		66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A62FCD549000BA27AD /* Double+Ext.swift */; };
+		66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		66EC96692FCD4E7000BA27AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66EC96A42FCD521200BA27AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		66EC96A62FCD549000BA27AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				66EC96A42FCD521200BA27AD /* User.swift */,
+				66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
 				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
 				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
+				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,
 				66EC96A52FCD521200BA27AD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

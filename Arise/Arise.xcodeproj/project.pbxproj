@@ -17,6 +17,12 @@
 		66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A62FCD549000BA27AD /* Double+Ext.swift */; };
 		66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */; };
 		66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C32FCD5E7700BA27AD /* WorkoutSession.swift */; };
+		66EC96C62FCD671700BA27AD /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */; };
+		66EC96C82FCD686100BA27AD /* HealthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */; };
+		66EC96CA2FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */; };
+		66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */; };
+		66EC96CE2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */; };
+		66EC96D02FCD6F6200BA27AD /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +47,12 @@
 		66EC96A62FCD549000BA27AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
 		66EC96C32FCD5E7700BA27AD /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+		66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocol.swift; sourceTree = "<group>"; };
+		66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothServiceProtocol.swift; sourceTree = "<group>"; };
+		66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,12 @@
 		66EC96762FCD4EBB00BA27AD /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */,
+				66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */,
+				66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */,
+				66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */,
+				66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */,
+				66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -319,8 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC96C62FCD671700BA27AD /* UserRepositoryProtocol.swift in Sources */,
+				66EC96D02FCD6F6200BA27AD /* AuthServiceProtocol.swift in Sources */,
+				66EC96CA2FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift in Sources */,
+				66EC96C82FCD686100BA27AD /* HealthRepositoryProtocol.swift in Sources */,
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
+				66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */,
 				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
+				66EC96CE2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift in Sources */,
 				66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */,
 				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
 				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,

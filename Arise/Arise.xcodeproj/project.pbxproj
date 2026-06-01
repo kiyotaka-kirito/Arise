@@ -6,23 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96672FCD4E7000BA27AD /* AriseApp.swift */; };
+		66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96692FCD4E7000BA27AD /* ContentView.swift */; };
+		66EC966D2FCD4E7000BA27AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EC96682FCD4E7000BA27AD /* Assets.xcassets */; };
+		66EC96832FCD4F6300BA27AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96822FCD4F6300BA27AD /* RxCocoa */; };
+		66EC96852FCD4F6300BA27AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96842FCD4F6300BA27AD /* RxSwift */; };
+		66EC96882FCD503600BA27AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96872FCD503600BA27AD /* RealmSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66EC968A2FCD505600BA27AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		66EC964D2FCD4D9C00BA27AD /* Arise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EC96672FCD4E7000BA27AD /* AriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AriseApp.swift; sourceTree = "<group>"; };
+		66EC96682FCD4E7000BA27AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66EC96692FCD4E7000BA27AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		66EC964F2FCD4D9C00BA27AD /* Arise */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Arise;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		66EC964A2FCD4D9C00BA27AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC96882FCD503600BA27AD /* RealmSwift in Frameworks */,
+				66EC96852FCD4F6300BA27AD /* RxSwift in Frameworks */,
+				66EC96832FCD4F6300BA27AD /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +52,7 @@
 		66EC96442FCD4D9C00BA27AD = {
 			isa = PBXGroup;
 			children = (
-				66EC964F2FCD4D9C00BA27AD /* Arise */,
+				66EC966A2FCD4E7000BA27AD /* Arise */,
 				66EC964E2FCD4D9C00BA27AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +65,168 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		66EC966A2FCD4E7000BA27AD /* Arise */ = {
+			isa = PBXGroup;
+			children = (
+				66EC966E2FCD4E7700BA27AD /* Core */,
+				66EC96722FCD4E9C00BA27AD /* Domian */,
+				66EC96712FCD4E9600BA27AD /* Data */,
+				66EC96702FCD4E8B00BA27AD /* Presentation */,
+				66EC966F2FCD4E8200BA27AD /* Resources */,
+				66EC96672FCD4E7000BA27AD /* AriseApp.swift */,
+				66EC96682FCD4E7000BA27AD /* Assets.xcassets */,
+				66EC96692FCD4E7000BA27AD /* ContentView.swift */,
+			);
+			path = Arise;
+			sourceTree = "<group>";
+		};
+		66EC966E2FCD4E7700BA27AD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				66EC96742FCD4EAF00BA27AD /* DI */,
+				66EC96732FCD4EA700BA27AD /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		66EC966F2FCD4E8200BA27AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66EC96802FCD4F1200BA27AD /* Fonts */,
+				66EC967F2FCD4F0900BA27AD /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66EC96702FCD4E8B00BA27AD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				66EC967E2FCD4F0200BA27AD /* Common */,
+				66EC967D2FCD4EFB00BA27AD /* Dashboard */,
+				66EC967C2FCD4EF500BA27AD /* Workout */,
+				66EC967B2FCD4EEE00BA27AD /* Profile */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		66EC96712FCD4E9600BA27AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				66EC967A2FCD4EDC00BA27AD /* Repostories */,
+				66EC96792FCD4ED500BA27AD /* Services */,
+				66EC96782FCD4ECE00BA27AD /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		66EC96722FCD4E9C00BA27AD /* Domian */ = {
+			isa = PBXGroup;
+			children = (
+				66EC96772FCD4EC300BA27AD /* Entities */,
+				66EC96762FCD4EBB00BA27AD /* Interfaces */,
+				66EC96752FCD4EB300BA27AD /* UseCases */,
+			);
+			path = Domian;
+			sourceTree = "<group>";
+		};
+		66EC96732FCD4EA700BA27AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66EC96742FCD4EAF00BA27AD /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		66EC96752FCD4EB300BA27AD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		66EC96762FCD4EBB00BA27AD /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		66EC96772FCD4EC300BA27AD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		66EC96782FCD4ECE00BA27AD /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		66EC96792FCD4ED500BA27AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		66EC967A2FCD4EDC00BA27AD /* Repostories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repostories;
+			sourceTree = "<group>";
+		};
+		66EC967B2FCD4EEE00BA27AD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		66EC967C2FCD4EF500BA27AD /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		66EC967D2FCD4EFB00BA27AD /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		66EC967E2FCD4F0200BA27AD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66EC967F2FCD4F0900BA27AD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		66EC96802FCD4F1200BA27AD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,16 +237,17 @@
 				66EC96492FCD4D9C00BA27AD /* Sources */,
 				66EC964A2FCD4D9C00BA27AD /* Frameworks */,
 				66EC964B2FCD4D9C00BA27AD /* Resources */,
+				66EC968A2FCD505600BA27AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				66EC964F2FCD4D9C00BA27AD /* Arise */,
-			);
 			name = Arise;
 			packageProductDependencies = (
+				66EC96822FCD4F6300BA27AD /* RxCocoa */,
+				66EC96842FCD4F6300BA27AD /* RxSwift */,
+				66EC96872FCD503600BA27AD /* RealmSwift */,
 			);
 			productName = Arise;
 			productReference = 66EC964D2FCD4D9C00BA27AD /* Arise.app */;
@@ -94,6 +277,10 @@
 			);
 			mainGroup = 66EC96442FCD4D9C00BA27AD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66EC96812FCD4F6300BA27AD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				66EC96862FCD503600BA27AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66EC964E2FCD4D9C00BA27AD /* Products */;
 			projectDirPath = "";
@@ -109,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC966D2FCD4E7000BA27AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
+				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -236,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -256,11 +446,13 @@
 				DEVELOPMENT_TEAM = 782Y4VGK55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -274,7 +466,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -288,11 +480,13 @@
 				DEVELOPMENT_TEAM = 782Y4VGK55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +500,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -332,6 +526,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66EC96812FCD4F6300BA27AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.10.2;
+			};
+		};
+		66EC96862FCD503600BA27AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = community;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66EC96822FCD4F6300BA27AD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC96812FCD4F6300BA27AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		66EC96842FCD4F6300BA27AD /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC96812FCD4F6300BA27AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		66EC96872FCD503600BA27AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC96862FCD503600BA27AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66EC96452FCD4D9C00BA27AD /* Project object */;
 }

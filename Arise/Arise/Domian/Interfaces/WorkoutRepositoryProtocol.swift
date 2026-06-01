@@ -18,7 +18,7 @@ protocol WorkoutRepositoryProtocol {
     
     // Fetch
     func fetchWorkoutHistory(for userId: String, limit: Int) -> Observable<[WorkoutSession]>
-    func fetchWorkouts(for userId: String, type: WorkType, in dateRange: DateRange) -> Observable<[WorkoutSession]>
+    func fetchWorkouts(for userId: String, type: WorkoutType, in dateRange: DateRange) -> Observable<[WorkoutSession]>
     func fetchWorkoutSession(by id: String) -> Observable<WorkoutSession>
     func fetchActiveSession(for userId: String) -> Observable<WorkoutSession?>
     

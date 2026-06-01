@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - WorkoutType
-enum WorkType: String, Codable, CaseIterable {
+enum WorkoutType: String, Codable, CaseIterable {
     case running        = "running"
     case cycling        = "cycling"
     case swimming       = "swimming"
@@ -121,12 +121,12 @@ struct WorkoutSession: Equatable, Codable, Identifiable {
     let userId: String
     
     // MARK: - Workout Info
-    let type: WorkType
+    let type: WorkoutType
     var status: WorkoutStatus
     
     // MARK: - Timing
     let startTime: Date
-    let endTime: Date?
+    var endTime: Date?
     
     // MARK: - Performance Metrics
     var totalDistanceMeters: Double
@@ -190,7 +190,7 @@ struct WorkoutSession: Equatable, Codable, Identifiable {
     init(
         id: String = UUID().uuidString,
         userId: String,
-        type: WorkType,
+        type: WorkoutType,
         status: WorkoutStatus = .idle,
         startTime: Date = Date(),
         endTime: Date? = nil,

@@ -13,6 +13,8 @@
 		66EC96832FCD4F6300BA27AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96822FCD4F6300BA27AD /* RxCocoa */; };
 		66EC96852FCD4F6300BA27AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96842FCD4F6300BA27AD /* RxSwift */; };
 		66EC96882FCD503600BA27AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96872FCD503600BA27AD /* RealmSwift */; };
+		66EC96A52FCD521200BA27AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A42FCD521200BA27AD /* User.swift */; };
+		66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A62FCD549000BA27AD /* Double+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		66EC96672FCD4E7000BA27AD /* AriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AriseApp.swift; sourceTree = "<group>"; };
 		66EC96682FCD4E7000BA27AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EC96692FCD4E7000BA27AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66EC96A42FCD521200BA27AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		66EC96A62FCD549000BA27AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		66EC96732FCD4EA700BA27AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96A62FCD549000BA27AD /* Double+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 		66EC96772FCD4EC300BA27AD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96A42FCD521200BA27AD /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 			files = (
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
 				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
+				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
+				66EC96A52FCD521200BA27AD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -63,7 +63,7 @@ enum WorkoutStatus: String, Codable {
 }
 
 // MARK: - GPSCoordinator
-struct GPSCoordinator: Equatable, Codable {
+struct GPSCoordinate: Equatable, Codable {
     let latitude: Double
     let longitude: Double
     let altitude: Double
@@ -136,7 +136,7 @@ struct WorkoutSession: Equatable, Codable, Identifiable {
     var averageSpeedMps: Double
     
     // MARK: - Nested Data
-    var gpsRoute: [GPSCoordinator]
+    var gpsRoute: [GPSCoordinate]
     var heartRateSamples: [HealthMetric]
     var lapSplits: [LapSplit]
     
@@ -199,7 +199,7 @@ struct WorkoutSession: Equatable, Codable, Identifiable {
         averageHeartRate: Double? = nil,
         maxHeartRate: Double? = nil,
         averageSpeedMps: Double = 0,
-        gpsRoute: [GPSCoordinator] = [],
+        gpsRoute: [GPSCoordinate] = [],
         heartRateSamples: [HealthMetric] = [],
         lapSplits: [LapSplit] = [],
         notes: String? = nil,

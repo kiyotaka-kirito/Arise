@@ -24,7 +24,7 @@ protocol WorkoutRepositoryProtocol {
     
     // Stats
     func fetchTotalDistance(for userId: String, in dateRange: DateRange) -> Single<Double>
-    func fetchTotalCalories(for userid: String, in dateRange: DateRange) -> Single<Double>
+    func fetchTotalCalories(for userId: String, in dateRange: DateRange) -> Single<Double>
     
     // Delete
     func deleteWorkoutSession(by id: String) -> Completable

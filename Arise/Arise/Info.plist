@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Arise needs location access to track your workout route</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Arise uses your location to map your workout route</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Arise connects to your heart rate monitor for live tracking</string>
+</dict>
+</plist>

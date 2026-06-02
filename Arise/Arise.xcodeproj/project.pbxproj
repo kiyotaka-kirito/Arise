@@ -48,6 +48,10 @@
 		66EC97CC2FCEECFC00BA27AD /* StepsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */; };
 		66EC97CE2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */; };
 		66EC97D02FCEF60800BA27AD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CF2FCEF60800BA27AD /* DashboardView.swift */; };
+		66EC97D32FCF20F600BA27AD /* WorkoutTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97D22FCF20F600BA27AD /* WorkoutTypePickerView.swift */; };
+		66EC97D52FCF246800BA27AD /* ListMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97D42FCF246800BA27AD /* ListMetricView.swift */; };
+		66EC97D72FCF26EC00BA27AD /* WorkoutControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97D62FCF26EC00BA27AD /* WorkoutControlButton.swift */; };
+		66EC97D92FCF2A6400BA27AD /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97D82FCF2A6400BA27AD /* WorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +107,11 @@
 		66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProgressView.swift; sourceTree = "<group>"; };
 		66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryRowView.swift; sourceTree = "<group>"; };
 		66EC97CF2FCEF60800BA27AD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		66EC97D22FCF20F600BA27AD /* WorkoutTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypePickerView.swift; sourceTree = "<group>"; };
+		66EC97D42FCF246800BA27AD /* ListMetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMetricView.swift; sourceTree = "<group>"; };
+		66EC97D62FCF26EC00BA27AD /* WorkoutControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutControlButton.swift; sourceTree = "<group>"; };
+		66EC97D82FCF2A6400BA27AD /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		66EC97DA2FCF421600BA27AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,7 @@
 		66EC966A2FCD4E7000BA27AD /* Arise */ = {
 			isa = PBXGroup;
 			children = (
+				66EC97DA2FCF421600BA27AD /* Info.plist */,
 				66EC966E2FCD4E7700BA27AD /* Core */,
 				66EC96722FCD4E9C00BA27AD /* Domian */,
 				66EC96712FCD4E9600BA27AD /* Data */,
@@ -290,7 +300,9 @@
 		66EC967C2FCD4EF500BA27AD /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				66EC97D12FCF20D900BA27AD /* Components */,
 				66EC97C02FCEC85100BA27AD /* WorkoutViewModel.swift */,
+				66EC97D82FCF2A6400BA27AD /* WorkoutView.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -376,6 +388,16 @@
 				66EC97C92FCEE9FC00BA27AD /* MetricCardView.swift */,
 				66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */,
 				66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		66EC97D12FCF20D900BA27AD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				66EC97D22FCF20F600BA27AD /* WorkoutTypePickerView.swift */,
+				66EC97D42FCF246800BA27AD /* ListMetricView.swift */,
+				66EC97D62FCF26EC00BA27AD /* WorkoutControlButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -468,14 +490,17 @@
 				66EC96D02FCD6F6200BA27AD /* AuthServiceProtocol.swift in Sources */,
 				66EC96CA2FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift in Sources */,
 				66EC97AD2FCEA2A300BA27AD /* RealmWorkoutSession.swift in Sources */,
+				66EC97D52FCF246800BA27AD /* ListMetricView.swift in Sources */,
 				66EC977E2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift in Sources */,
 				66EC96C82FCD686100BA27AD /* HealthRepositoryProtocol.swift in Sources */,
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
 				66EC97B52FCEBAC900BA27AD /* KeychainAuthService.swift in Sources */,
 				66EC97C32FCEC93A00BA27AD /* ProfileViewModel.swift in Sources */,
 				66EC97CC2FCEECFC00BA27AD /* StepsProgressView.swift in Sources */,
+				66EC97D92FCF2A6400BA27AD /* WorkoutView.swift in Sources */,
 				66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */,
 				66EC97D02FCEF60800BA27AD /* DashboardView.swift in Sources */,
+				66EC97D32FCF20F600BA27AD /* WorkoutTypePickerView.swift in Sources */,
 				66EC97B72FCEBBD200BA27AD /* CoreLocationService.swift in Sources */,
 				66EC97AF2FCEA86100BA27AD /* RealmUserRepository.swift in Sources */,
 				66EC97B32FCEB4CF00BA27AD /* RealmWorkoutRepositroy.swift in Sources */,
@@ -487,6 +512,7 @@
 				66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */,
 				66EC97A92FCE9E2700BA27AD /* RealmUser.swift in Sources */,
 				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
+				66EC97D72FCF26EC00BA27AD /* WorkoutControlButton.swift in Sources */,
 				66EC97CE2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift in Sources */,
 				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,
 				66EC97B12FCEAF2700BA27AD /* RealmHealthRepostiory.swift in Sources */,
@@ -634,6 +660,7 @@
 				DEVELOPMENT_TEAM = 782Y4VGK55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Arise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -668,6 +695,7 @@
 				DEVELOPMENT_TEAM = 782Y4VGK55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Arise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

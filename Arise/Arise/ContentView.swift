@@ -50,7 +50,23 @@ struct ContentView: View {
             }
         
         case .mainTab:
-            DashboardView(viewModel: container.makeDashboardViewModel())
+            TabView {
+                DashboardView(viewModel: container.makeDashboardViewModel())
+                    .tabItem {
+                        Label("Dashboard", systemImage: "heart.fill")
+                    }
+                
+                WorkoutView(viewModel: container.makeWorkoutViewModel())
+                    .tabItem {
+                        Label("Workout", systemImage: "figure.run")
+                    }
+                
+                Text("Profile")
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+            }
+            .tint(Color.arisePrimaryFallback)
             
         default:
             EmptyView()

@@ -43,6 +43,11 @@
 		66EC97C12FCEC85100BA27AD /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97C02FCEC85100BA27AD /* WorkoutViewModel.swift */; };
 		66EC97C32FCEC93A00BA27AD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97C22FCEC93A00BA27AD /* ProfileViewModel.swift */; };
 		66EC97C52FCECA3E00BA27AD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97C42FCECA3E00BA27AD /* AppCoordinator.swift */; };
+		66EC97C72FCEE40600BA27AD /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97C62FCEE40600BA27AD /* Color+Ext.swift */; };
+		66EC97CA2FCEE9FC00BA27AD /* MetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97C92FCEE9FC00BA27AD /* MetricCardView.swift */; };
+		66EC97CC2FCEECFC00BA27AD /* StepsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */; };
+		66EC97CE2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */; };
+		66EC97D02FCEF60800BA27AD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97CF2FCEF60800BA27AD /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +98,11 @@
 		66EC97C02FCEC85100BA27AD /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		66EC97C22FCEC93A00BA27AD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		66EC97C42FCECA3E00BA27AD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		66EC97C62FCEE40600BA27AD /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		66EC97C92FCEE9FC00BA27AD /* MetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCardView.swift; sourceTree = "<group>"; };
+		66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProgressView.swift; sourceTree = "<group>"; };
+		66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryRowView.swift; sourceTree = "<group>"; };
+		66EC97CF2FCEF60800BA27AD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				66EC96A62FCD549000BA27AD /* Double+Ext.swift */,
+				66EC97C62FCEE40600BA27AD /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,7 +298,9 @@
 		66EC967D2FCD4EFB00BA27AD /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				66EC97C82FCEE9E600BA27AD /* Components */,
 				66EC97BE2FCEC6CF00BA27AD /* DashboardViewModel.swift */,
+				66EC97CF2FCEF60800BA27AD /* DashboardView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -355,6 +368,16 @@
 				66EC97AC2FCEA2A300BA27AD /* RealmWorkoutSession.swift */,
 			);
 			path = RealmObjects;
+			sourceTree = "<group>";
+		};
+		66EC97C82FCEE9E600BA27AD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				66EC97C92FCEE9FC00BA27AD /* MetricCardView.swift */,
+				66EC97CB2FCEECFC00BA27AD /* StepsProgressView.swift */,
+				66EC97CD2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,22 +473,27 @@
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
 				66EC97B52FCEBAC900BA27AD /* KeychainAuthService.swift in Sources */,
 				66EC97C32FCEC93A00BA27AD /* ProfileViewModel.swift in Sources */,
+				66EC97CC2FCEECFC00BA27AD /* StepsProgressView.swift in Sources */,
 				66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */,
+				66EC97D02FCEF60800BA27AD /* DashboardView.swift in Sources */,
 				66EC97B72FCEBBD200BA27AD /* CoreLocationService.swift in Sources */,
 				66EC97AF2FCEA86100BA27AD /* RealmUserRepository.swift in Sources */,
 				66EC97B32FCEB4CF00BA27AD /* RealmWorkoutRepositroy.swift in Sources */,
 				66EC97C52FCECA3E00BA27AD /* AppCoordinator.swift in Sources */,
 				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
 				66EC96CE2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift in Sources */,
+				66EC97CA2FCEE9FC00BA27AD /* MetricCardView.swift in Sources */,
 				66EC97762FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift in Sources */,
 				66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */,
 				66EC97A92FCE9E2700BA27AD /* RealmUser.swift in Sources */,
 				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
+				66EC97CE2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift in Sources */,
 				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,
 				66EC97B12FCEAF2700BA27AD /* RealmHealthRepostiory.swift in Sources */,
 				66EC97BB2FCEC3A400BA27AD /* AppDependencyContainer.swift in Sources */,
 				66EC977A2FCD904700BA27AD /* StopWorkoutUseCase.swift in Sources */,
 				66EC977C2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift in Sources */,
+				66EC97C72FCEE40600BA27AD /* Color+Ext.swift in Sources */,
 				66EC97B92FCEBC8200BA27AD /* CoreBluetoothService.swift in Sources */,
 				66EC96A52FCD521200BA27AD /* User.swift in Sources */,
 				66EC97782FCD8CBE00BA27AD /* StartWorkoutUseCase.swift in Sources */,

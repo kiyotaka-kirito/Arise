@@ -50,17 +50,7 @@ struct ContentView: View {
             }
         
         case .mainTab:
-            VStack(spacing: 20) {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundStyle(.green)
-                Text("Architecture Complete!")
-                    .font(.title.bold())
-                Text("All layers connected successfully.")
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding()
+            DashboardView(viewModel: container.makeDashboardViewModel())
             
         default:
             EmptyView()

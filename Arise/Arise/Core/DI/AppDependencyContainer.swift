@@ -99,8 +99,42 @@ final class AppDependencyContainer {
     func makeProfileViewModel() -> ProfileViewModel {
         ProfileViewModel(
             getCurrentUserUseCase: makeGetCurrentUserUseCase(),
-            userRepository: userRepository
+            userRepository: userRepository,
+            authService: authService
         )
+    }
+    
+    // MARK: - Development Helper
+    private let disposeBag = DisposeBag()
+    
+    func signInMockUser(completion: @escaping (AppRoute) -> Void) {
+        let credentials = AutAuthCredentials(
+            email: "kiri@gmail.com",
+            password: "password123"
+        )
+        
+        let signInUseCase = makeSignInUseCase()
+        
+        signInUseCase.execute(with: credentials)
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onSuccess: { user in
+                    self.userRepository.saveUser(user)
+                        .subscribe(
+                            onCompleted: {
+                                completion(.mainTab)
+                            },
+                            onError: { error in
+                                completion(.mainTab)
+                            }
+                        )
+                        .disposed(by: self.disposeBag)
+                },
+                onFailure: { _ in
+                    completion(.mainTab)
+                }
+            )
+            .disposed(by: disposeBag)
     }
     
 }

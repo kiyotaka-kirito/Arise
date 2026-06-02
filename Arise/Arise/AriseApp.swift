@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct AriseApp: App {
+    
+    // MARK: - Root Dependencies
+    private let container = AppDependencyContainer()
+    private let coordinator: AppCoordinator
+    
+    init() {
+        coordinator = AppCoordinator(container: container)
+        coordinator.start()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(coordinator: coordinator, container: container)
         }
     }
 }

@@ -13,6 +13,22 @@
 		66EC96832FCD4F6300BA27AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96822FCD4F6300BA27AD /* RxCocoa */; };
 		66EC96852FCD4F6300BA27AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96842FCD4F6300BA27AD /* RxSwift */; };
 		66EC96882FCD503600BA27AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC96872FCD503600BA27AD /* RealmSwift */; };
+		66EC96A52FCD521200BA27AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A42FCD521200BA27AD /* User.swift */; };
+		66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96A62FCD549000BA27AD /* Double+Ext.swift */; };
+		66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */; };
+		66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C32FCD5E7700BA27AD /* WorkoutSession.swift */; };
+		66EC96C62FCD671700BA27AD /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */; };
+		66EC96C82FCD686100BA27AD /* HealthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */; };
+		66EC96CA2FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */; };
+		66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */; };
+		66EC96CE2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */; };
+		66EC96D02FCD6F6200BA27AD /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */; };
+		66EC97742FCD886F00BA27AD /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97732FCD886F00BA27AD /* SignInUseCase.swift */; };
+		66EC97762FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97752FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift */; };
+		66EC97782FCD8CBE00BA27AD /* StartWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97772FCD8CBE00BA27AD /* StartWorkoutUseCase.swift */; };
+		66EC977A2FCD904700BA27AD /* StopWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC97792FCD904700BA27AD /* StopWorkoutUseCase.swift */; };
+		66EC977C2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC977B2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift */; };
+		66EC977E2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC977D2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +49,22 @@
 		66EC96672FCD4E7000BA27AD /* AriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AriseApp.swift; sourceTree = "<group>"; };
 		66EC96682FCD4E7000BA27AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EC96692FCD4E7000BA27AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66EC96A42FCD521200BA27AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		66EC96A62FCD549000BA27AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
+		66EC96C32FCD5E7700BA27AD /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+		66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepositoryProtocol.swift; sourceTree = "<group>"; };
+		66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocol.swift; sourceTree = "<group>"; };
+		66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothServiceProtocol.swift; sourceTree = "<group>"; };
+		66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		66EC97732FCD886F00BA27AD /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
+		66EC97752FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentUserUseCase.swift; sourceTree = "<group>"; };
+		66EC97772FCD8CBE00BA27AD /* StartWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutUseCase.swift; sourceTree = "<group>"; };
+		66EC97792FCD904700BA27AD /* StopWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWorkoutUseCase.swift; sourceTree = "<group>"; };
+		66EC977B2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkoutHistoryUseCase.swift; sourceTree = "<group>"; };
+		66EC977D2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHealthSummaryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +164,7 @@
 		66EC96732FCD4EA700BA27AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96A62FCD549000BA27AD /* Double+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +179,10 @@
 		66EC96752FCD4EB300BA27AD /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				66EC97722FCD885100BA27AD /* Auth */,
+				66EC97712FCD884B00BA27AD /* User */,
+				66EC97702FCD884400BA27AD /* Workout */,
+				66EC976F2FCD883E00BA27AD /* Health */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -153,6 +190,12 @@
 		66EC96762FCD4EBB00BA27AD /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96C52FCD671700BA27AD /* UserRepositoryProtocol.swift */,
+				66EC96C72FCD686100BA27AD /* HealthRepositoryProtocol.swift */,
+				66EC96C92FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift */,
+				66EC96CB2FCD6CD700BA27AD /* LocationServiceProtocol.swift */,
+				66EC96CD2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift */,
+				66EC96CF2FCD6F6200BA27AD /* AuthServiceProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -160,6 +203,9 @@
 		66EC96772FCD4EC300BA27AD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				66EC96A42FCD521200BA27AD /* User.swift */,
+				66EC96C12FCD5AD100BA27AD /* HealthMetric.swift */,
+				66EC96C32FCD5E7700BA27AD /* WorkoutSession.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -225,6 +271,40 @@
 			children = (
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		66EC976F2FCD883E00BA27AD /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				66EC977D2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		66EC97702FCD884400BA27AD /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				66EC97772FCD8CBE00BA27AD /* StartWorkoutUseCase.swift */,
+				66EC97792FCD904700BA27AD /* StopWorkoutUseCase.swift */,
+				66EC977B2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		66EC97712FCD884B00BA27AD /* User */ = {
+			isa = PBXGroup;
+			children = (
+				66EC97752FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		66EC97722FCD885100BA27AD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				66EC97732FCD886F00BA27AD /* SignInUseCase.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +387,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC97742FCD886F00BA27AD /* SignInUseCase.swift in Sources */,
+				66EC96C62FCD671700BA27AD /* UserRepositoryProtocol.swift in Sources */,
+				66EC96D02FCD6F6200BA27AD /* AuthServiceProtocol.swift in Sources */,
+				66EC96CA2FCD6A5100BA27AD /* WorkoutRepositoryProtocol.swift in Sources */,
+				66EC977E2FCD947800BA27AD /* FetchHealthSummaryUseCase.swift in Sources */,
+				66EC96C82FCD686100BA27AD /* HealthRepositoryProtocol.swift in Sources */,
 				66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */,
+				66EC96CC2FCD6CD700BA27AD /* LocationServiceProtocol.swift in Sources */,
 				66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */,
+				66EC96CE2FCD6E0700BA27AD /* BluetoothServiceProtocol.swift in Sources */,
+				66EC97762FCD8B5D00BA27AD /* GetCurrentUserUseCase.swift in Sources */,
+				66EC96C42FCD5E7700BA27AD /* WorkoutSession.swift in Sources */,
+				66EC96A72FCD549000BA27AD /* Double+Ext.swift in Sources */,
+				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,
+				66EC977A2FCD904700BA27AD /* StopWorkoutUseCase.swift in Sources */,
+				66EC977C2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift in Sources */,
+				66EC96A52FCD521200BA27AD /* User.swift in Sources */,
+				66EC97782FCD8CBE00BA27AD /* StartWorkoutUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

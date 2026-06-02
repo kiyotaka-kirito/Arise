@@ -25,12 +25,12 @@ protocol LocationServiceProtocol {
     func requestAlwaysAuthorization()
     
     // Tracking
-    func startTracking() -> Observable<GPSCoordinator>
+    func startTracking() -> Observable<GPSCoordinate>
     func stopTracking()
     func pauseTracking()
     func resumeTracking()
     
     // One-Shot Location
-    func fetchCurrentLocation() -> Single<GPSCoordinator>
+    func fetchCurrentLocation() -> Single<GPSCoordinate>
     
 }

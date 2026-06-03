@@ -15,6 +15,7 @@ struct ContentView: View {
     let container: AppDependencyContainer
     
     // MARK: - State
+    @State private var showSignUp = false
     @State private var currentRoute: AppRoute = .signIn
     @State private var selectedTab: Int = 0
     private let disposeBag = DisposeBag()
@@ -23,7 +24,7 @@ struct ContentView: View {
         Group {
             switch currentRoute {
             case .signIn, .onboarding:
-                signInPlaceholder
+                authFlow
                 
             case .mainTab:
                 mainTabView
@@ -36,7 +37,7 @@ struct ContentView: View {
             coordinator.currentRoute
                 .observe(on: MainScheduler.instance)
                 .subscribe(onNext: { route in
-                    withAnimation(.easeInOut(duration: 0.35)) {
+                    withAnimation(.easeInOut(duration: 0.4)) {
                         currentRoute = route
                     }
                 })
@@ -50,74 +51,39 @@ struct ContentView: View {
 // MARK: - Components
 extension ContentView {
     
-    // MARK: - Sign In Placeholder
-    private var signInPlaceholder: some View {
-        ZStack {
-            LinearGradient(
-                colors: [
-                    Color.arisePrimaryFallback.opacity(0.15),
-                    Color.ariseBackgroundFallback
-                ],
-                startPoint: .top,
-                endPoint: .bottom
+    // MARK: - Auth Flow
+    @ViewBuilder
+    private var authFlow: some View {
+        if showSignUp {
+            SignUpView(
+                viewModel: container.makeSignUpViewModel(),
+                onSignUpSuccess: { user in handleAuthSuccess(user: user)},
+                onNavigateToSignIn: {
+                    withAnimation(.spring(response: 0.4)) { showSignUp = false }
+                }
             )
-            .ignoresSafeArea()
-            
-            VStack(spacing: 32) {
-                Spacer()
-                
-                // Logo
-                VStack(spacing: 12) {
-                    ZStack {
-                        Circle()
-                            .fill(Color.arisePrimaryFallback.opacity(0.15))
-                            .frame(width: 100, height: 100)
-                        Image(systemName: "heart.fill")
-                            .font(.system(size: 48))
-                            .foregroundStyle(Color.arisePrimaryFallback)
-                    }
-                    
-                    Text("Arise")
-                        .font(.system(size: 42, weight: .black, design: .rounded))
-                        .foregroundStyle(Color.arisePrimaryFallback)
-                    
-                    Text("Your personal health companion")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+            .transition(
+                .asymmetric(
+                    insertion: .move(edge: .trailing),
+                    removal: .move(edge: .leading)
+                )
+            )
+        } else {
+            SignInView(
+                viewModel: container.makeSignInViewModel(),
+                onSignInSuccess: { user in handleAuthSuccess(user: user)},
+                onNavigateToSignUp: {
+                    withAnimation(.spring(response: 0.4)) { showSignUp = true }
                 }
-                
-                Spacer()
-                
-                // Button
-                VStack(spacing: 12) {
-                    Button {
-                        container.signInMockUser { route in
-                            coordinator.navigate(to: route)
-                        }
-                    } label: {
-                        Text("Get Started")
-                            .font(.headline)
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 56)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.arisePrimaryFallback)
-                                    .shadow(
-                                        color: Color.arisePrimaryFallback.opacity(0.4),
-                                        radius: 16, x: 0, y: 8
-                                    )
-                            )
-                    }
-                    
-                    Text("Real auth flow added in next milestone")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                .padding(.horizontal, 32)
-                .padding(.bottom, 48)
-            }
+            )
+            .transition(
+                .asymmetric(
+                    insertion: .move(edge: .trailing),
+                    removal: .move(edge: .leading)
+                )
+            )
         }
+        
     }
     
     // MARK: - Main Tab View
@@ -145,6 +111,15 @@ extension ContentView {
             .tag(2)
         }
         .tint(Color.arisePrimaryFallback)
+    }
+    
+    // MARK: - Auth Success Handler
+    private func handleAuthSuccess(user: User) {
+        _ = container.saveUserToRealm(user)
+        
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+            coordinator.navigate(to: .mainTab)
+        }
     }
 }
 

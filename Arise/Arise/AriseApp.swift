@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct AriseApp: App {
@@ -15,13 +16,18 @@ struct AriseApp: App {
     private let coordinator: AppCoordinator
     
     init() {
+        FirebaseApp.configure()
+        
         coordinator = AppCoordinator(container: container)
         coordinator.start()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView(coordinator: coordinator, container: container)
+            ContentView(
+                coordinator: coordinator,
+                container: container
+            )
         }
     }
 }

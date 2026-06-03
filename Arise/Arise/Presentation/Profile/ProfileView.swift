@@ -226,7 +226,7 @@ extension ProfileView {
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.arisePrimaryFallback)
+                    .fill(Color.ariseBackgroundFallback)
                     .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 4)
             )
             .padding(.horizontal, 20)

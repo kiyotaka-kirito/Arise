@@ -19,7 +19,8 @@ final class AppDependencyContainer {
     
     // MARK: - Services
     private lazy var authService: AuthServiceProtocol = {
-        KeychainAuthService()
+        // KeychainAuthService()
+        FirebaseAuthService()
     }()
     
     private lazy var locationService: LocationServiceProtocol = {
@@ -102,6 +103,22 @@ final class AppDependencyContainer {
             userRepository: userRepository,
             authService: authService
         )
+    }
+    
+    func makeSignInViewModel() -> SignInViewModel {
+        SignInViewModel(signInUseCase: makeSignInUseCase())
+    }
+    
+    func makeSignUpViewModel() -> SignUpViewModel {
+        SignUpViewModel(
+            authService: authService,
+            userRepository: userRepository
+        )
+    }
+    
+    // MARK: - Realm Save Helper
+    func saveUserToRealm(_ user: User) -> Completable {
+        userRepository.saveUser(user)
     }
     
     // MARK: - Development Helper

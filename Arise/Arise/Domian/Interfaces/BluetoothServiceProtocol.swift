@@ -37,7 +37,7 @@ protocol BluetoothServiceProtocol {
     
     // Connection
     func connect(to deviceId: String) -> Completable
-    func connect(from deviceId: String) -> Completable
+    func disconnect(from deviceId: String) -> Completable
     var connectedDevices: Observable<[PeripheralDevice]> { get }
     
     // Data Streams

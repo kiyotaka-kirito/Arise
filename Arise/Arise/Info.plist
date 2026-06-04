@@ -5,12 +5,7 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
+		<string>bluetooth-central</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Arise needs location access to track your workout route</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Arise uses your location to map your workout route</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Arise connects to your heart rate monitor for live tracking</string>
 </dict>
 </plist>

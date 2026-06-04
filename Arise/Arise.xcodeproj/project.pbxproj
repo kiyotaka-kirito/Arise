@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6670832B2FD0B12200E4256E /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670832A2FD0B12200E4256E /* BluetoothViewModel.swift */; };
+		6670832E2FD1434300E4256E /* PeripheralRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670832D2FD1434300E4256E /* PeripheralRowView.swift */; };
+		667083302FD145DA00E4256E /* HeartRateMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670832F2FD145DA00E4256E /* HeartRateMonitorView.swift */; };
+		667083322FD14ACC00E4256E /* BluetoothScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667083312FD14ACC00E4256E /* BluetoothScanView.swift */; };
 		66EC966B2FCD4E7000BA27AD /* AriseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96672FCD4E7000BA27AD /* AriseApp.swift */; };
 		66EC966C2FCD4E7000BA27AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC96692FCD4E7000BA27AD /* ContentView.swift */; };
 		66EC966D2FCD4E7000BA27AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EC96682FCD4E7000BA27AD /* Assets.xcassets */; };
@@ -82,6 +86,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6670832A2FD0B12200E4256E /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
+		6670832D2FD1434300E4256E /* PeripheralRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralRowView.swift; sourceTree = "<group>"; };
+		6670832F2FD145DA00E4256E /* HeartRateMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitorView.swift; sourceTree = "<group>"; };
+		667083312FD14ACC00E4256E /* BluetoothScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScanView.swift; sourceTree = "<group>"; };
 		66EC964D2FCD4D9C00BA27AD /* Arise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC96672FCD4E7000BA27AD /* AriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AriseApp.swift; sourceTree = "<group>"; };
 		66EC96682FCD4E7000BA27AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +164,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		667083292FD0B10C00E4256E /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				6670832C2FD1432700E4256E /* Components */,
+				6670832A2FD0B12200E4256E /* BluetoothViewModel.swift */,
+				667083312FD14ACC00E4256E /* BluetoothScanView.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		6670832C2FD1432700E4256E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6670832D2FD1434300E4256E /* PeripheralRowView.swift */,
+				6670832F2FD145DA00E4256E /* HeartRateMonitorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		66EC96442FCD4D9C00BA27AD = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +239,7 @@
 			children = (
 				66EC967E2FCD4F0200BA27AD /* Common */,
 				66EC97ED2FCFF9F500BA27AD /* Auth */,
+				667083292FD0B10C00E4256E /* Bluetooth */,
 				66EC967D2FCD4EFB00BA27AD /* Dashboard */,
 				66EC967C2FCD4EF500BA27AD /* Workout */,
 				66EC967B2FCD4EEE00BA27AD /* Profile */,
@@ -571,8 +599,10 @@
 				66EC97D02FCEF60800BA27AD /* DashboardView.swift in Sources */,
 				66EC97D32FCF20F600BA27AD /* WorkoutTypePickerView.swift in Sources */,
 				66EC97B72FCEBBD200BA27AD /* CoreLocationService.swift in Sources */,
+				6670832B2FD0B12200E4256E /* BluetoothViewModel.swift in Sources */,
 				66EC97E12FCF57B600BA27AD /* ProfileView.swift in Sources */,
 				66EC97AF2FCEA86100BA27AD /* RealmUserRepository.swift in Sources */,
+				6670832E2FD1434300E4256E /* PeripheralRowView.swift in Sources */,
 				66EC97B32FCEB4CF00BA27AD /* RealmWorkoutRepositroy.swift in Sources */,
 				66EC97C52FCECA3E00BA27AD /* AppCoordinator.swift in Sources */,
 				66EC97DF2FCF56FF00BA27AD /* ProfileStatRowView.swift in Sources */,
@@ -590,12 +620,14 @@
 				66EC97F82FD0108700BA27AD /* PasswordStrengthBar.swift in Sources */,
 				66EC97CE2FCEF27C00BA27AD /* WorkoutHistoryRowView.swift in Sources */,
 				66EC96C22FCD5AD100BA27AD /* HealthMetric.swift in Sources */,
+				667083322FD14ACC00E4256E /* BluetoothScanView.swift in Sources */,
 				66EC97B12FCEAF2700BA27AD /* RealmHealthRepostiory.swift in Sources */,
 				66EC97BB2FCEC3A400BA27AD /* AppDependencyContainer.swift in Sources */,
 				66EC977A2FCD904700BA27AD /* StopWorkoutUseCase.swift in Sources */,
 				66EC977C2FCD93D100BA27AD /* FetchWorkoutHistoryUseCase.swift in Sources */,
 				66EC97EC2FCFF0A100BA27AD /* FirebaseAuthService.swift in Sources */,
 				66EC97C72FCEE40600BA27AD /* Color+Ext.swift in Sources */,
+				667083302FD145DA00E4256E /* HeartRateMonitorView.swift in Sources */,
 				66EC97FC2FD0249100BA27AD /* SignUpView.swift in Sources */,
 				66EC97F62FD00B0300BA27AD /* AriseTextField.swift in Sources */,
 				66EC97B92FCEBC8200BA27AD /* CoreBluetoothService.swift in Sources */,
@@ -740,6 +772,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Arise connects to your heart rate monitor to track live vitals during workouts";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Arise uses Bluetooth to communicate with your heart rate monitor";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Arise needs location access to track your workout route";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Arise uses your location to map your workout route";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -775,6 +811,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Arise connects to your heart rate monitor to track live vitals during workouts";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Arise uses Bluetooth to communicate with your heart rate monitor";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Arise needs location access to track your workout route";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Arise uses your location to map your workout route";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

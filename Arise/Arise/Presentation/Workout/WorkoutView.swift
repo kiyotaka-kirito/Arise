@@ -13,11 +13,13 @@ import Combine
 struct WorkoutView: View {
     
     @StateObject private var wrapper: WorkoutViewModelWrapper
+    let container: AppDependencyContainer
     
-    init(viewModel: WorkoutViewModel) {
+    init(viewModel: WorkoutViewModel, container: AppDependencyContainer) {
         _wrapper = StateObject(
             wrappedValue: WorkoutViewModelWrapper(viewModel: viewModel)
         )
+        self.container = container
     }
     
     var body: some View {
@@ -29,8 +31,39 @@ struct WorkoutView: View {
                     activeWorkoutView
                         .transition(.asymmetric(
                             insertion: .move(edge: .bottom).combined(with: .opacity),
-                            removal: .move(edge: .top).combined(with: .opacity)
-                        ))
+                            removal: .move(edge: .top).combined(with: .opacity))
+                        )
+                    
+                    Spacer()
+                    
+                    // Bluetooth connect button
+                    Button {
+                        wrapper.showBluetoothSheet = true
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: wrapper.isBluetoothConnected
+                                  ? "antenna.radiowaves.left.and.right"
+                                  : "antenna.radiowaves.left.and.right.slash"
+                            )
+                            .font(.system(size: 14, weight: .semibold))
+                            
+                            if wrapper.currentHeartRate > 0 {
+                                Text("\(Int(wrapper.currentHeartRate)) bpm")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                            }
+                        }
+                        .foregroundStyle(wrapper.isBluetoothConnected ? .green : .secondary)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(
+                            Capsule()
+                                .fill(wrapper.isBluetoothConnected
+                                      ? Color.green.opacity(0.12)
+                                      : Color.secondary.opacity(0.1))
+                        )
+                    }
+
                 } else {
                     preWorkoutView
                         .transition(.opacity)
@@ -38,6 +71,9 @@ struct WorkoutView: View {
             }
             .animation(.spring(response: 0.5, dampingFraction: 0.8), value: wrapper.isTracking)
             .navigationBarHidden(true)
+            .sheet(isPresented: $wrapper.showBluetoothSheet) {
+                BluetoothScanView(viewModel: container.makeBluetoothViewModel())
+            }
             .alert("Error", isPresented: $wrapper.showError) {
                 Button("Ok", role: .cancel) {}
             } message: {
@@ -282,6 +318,9 @@ final class WorkoutViewModelWrapper:  ObservableObject {
     @Published var showError: Bool = false
     @Published var errorText: String = ""
     
+    @Published var showBluetoothSheet: Bool = false
+    @Published var isBluetoothConnected: Bool = false
+    
     private let placeholderUserId = "user_001"
     
     private let viewModel: WorkoutViewModel
@@ -336,6 +375,13 @@ final class WorkoutViewModelWrapper:  ObservableObject {
             .subscribe(onNext: { [weak self] message in
                 self?.errorText = message
                 self?.showError = true
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.bluetoothService.connectedDevices
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] devices in
+                self?.isBluetoothConnected = !devices.isEmpty
             })
             .disposed(by: disposeBag)
     }

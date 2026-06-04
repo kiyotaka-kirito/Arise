@@ -95,11 +95,14 @@ extension ContentView {
                 }
                 .tag(0)
             
-            WorkoutView(viewModel: container.makeWorkoutViewModel())
-                .tabItem {
-                    Label("Workout", systemImage: "figure.run")
-                }
-                .tag(1)
+            WorkoutView(
+                viewModel: container.makeWorkoutViewModel(),
+                container: container
+            )
+            .tabItem {
+                Label("Workout", systemImage: "figure.run")
+            }
+            .tag(1)
             
             ProfileView(
                 viewModel: container.makeProfileViewModel(),

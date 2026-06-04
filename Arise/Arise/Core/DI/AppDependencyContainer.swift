@@ -116,6 +116,11 @@ final class AppDependencyContainer {
         )
     }
     
+    // MARK: - Bluetooth
+    func makeBluetoothViewModel() -> BluetoothViewModel {
+        BluetoothViewModel(bluetoothService: bluetoothService)
+    }
+    
     // MARK: - Realm Save Helper
     func saveUserToRealm(_ user: User) -> Completable {
         userRepository.saveUser(user)

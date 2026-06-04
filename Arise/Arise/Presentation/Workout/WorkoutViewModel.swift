@@ -17,7 +17,7 @@ final class WorkoutViewModel {
     private let startWorkoutUseCase: StartWorkoutUseCaseProtocol
     private let stopWorkoutUseCase: StopWorkoutUseCaseProtocol
     private let locationService: LocationServiceProtocol
-    private let bluetoothService: BluetoothServiceProtocol
+    let bluetoothService: BluetoothServiceProtocol
     
     // MARK: - Outputs
     let currentSession = BehaviorRelay<WorkoutSession?>(value: nil)
